@@ -1,3 +1,21 @@
+## ToDoList- prosty frontend do aplikacji typu to do list z autoryzacją z jwt
+## Powiązany projekt
+Backend tej aplikacji powstał w Java Spring Web 
+Link do tego projektu: https://github.com/kubacki03/ToDoListJavaBackend.git
+
+## Demo
+Prezentacja projektu: https://youtu.be/3r_7X_QT2Ak
+## Funkcje
+-dodawanie nowych zadań
+-usuwanie zadań
+-sortowanie zadań
+-logowanie/rejestracja
+
+## Technologie
+- ANGULAR
+- TYPESCRIPT
+- TAILWINDCSS
+
 # ToDoList
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.4.
