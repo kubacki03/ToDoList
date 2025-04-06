@@ -8,7 +8,7 @@ import {AuthService} from '../auth.service';
   selector: 'app-task-list',
   standalone: true,
 
-  imports: [CommonModule, NewTaskComponent],  // <-- Add CommonModule here
+  imports: [CommonModule, NewTaskComponent],
   templateUrl: './task-list.component.html',
   styleUrl: './task-list.component.css'
 })

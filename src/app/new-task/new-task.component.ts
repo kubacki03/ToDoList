@@ -13,7 +13,7 @@ import {NgIf} from '@angular/common';
     ReactiveFormsModule,
     NgIf
   ],
-  // ścieżka do twojego pliku z formularzem
+
   styleUrls: ['./new-task.component.css']
 })
 export class NewTaskComponent {

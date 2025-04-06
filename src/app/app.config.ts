@@ -9,7 +9,7 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
     provideHttpClient(
-      withInterceptorsFromDi() // Wymagane dla interceptorów klasowych
+      withInterceptorsFromDi()
     ),
     {
       provide: HTTP_INTERCEPTORS,
