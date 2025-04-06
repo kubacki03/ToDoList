@@ -1,0 +1,51 @@
+<h1 class="text-3xl font-bold underline text-center text-gray-800 mb-6">
+  Kolejna nudna to-do lista
+</h1>
+<button (click)="logout()"
+        class="bg-red-500 text-white px-3 py-1 rounded-lg hover:bg-red-600 transition">
+  Wyloguj
+</button>
+<h2 class="text-xl font-semibold text-gray-700 mb-4">Dodaj nowe zadanie</h2>
+
+<app-task-form class="mb-6"></app-task-form>
+
+
+
+<div *ngIf="tasks.length > 0; else noTasks" class="bg-white p-6 rounded-lg shadow-md">
+
+  <div class="flex space-x-4 mb-4">
+    <button (click)="sortBy = 'title'; sortTasks()"
+            class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition">
+      Sortuj po nazwie
+    </button>
+    <button (click)="sortBy = 'deadline'; sortTasks()"
+            class="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition">
+      Sortuj po terminie
+    </button>
+    <button (click)="sortAsc = !sortAsc; sortTasks()"
+            class="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition">
+      Zmień kolejność
+    </button>
+  </div>
+
+
+
+  <h2 class="text-xl font-semibold text-gray-700 mb-4">Twoje zadania</h2>
+
+  <ul class="space-y-4">
+    <li *ngFor="let task of tasks" class="flex justify-between items-center p-4 bg-gray-100 rounded-lg shadow-sm">
+      <div>
+        <strong class="text-gray-900">{{ task.title }}</strong>
+        <span class="text-gray-600"> - {{ task.priority }} (Termin: {{ task.deadline }})</span>
+      </div>
+      <button (click)="deleteTask(task.id)"
+              class="bg-red-500 text-white px-3 py-1 rounded-lg hover:bg-red-600 transition">
+        Usuń
+      </button>
+    </li>
+  </ul>
+</div>
+
+<ng-template #noTasks>
+  <p class="text-blue-600 dark:text-sky-400 text-center mt-4">Brak zadań do wyświetlenia.</p>
+</ng-template>
